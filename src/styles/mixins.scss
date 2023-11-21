@@ -1,0 +1,9 @@
+@mixin gradient-bg {
+  background: linear-gradient(to top right, #FCB045 40%, #FD1D1D);
+}
+
+@mixin gradient-text {
+  @include gradient-bg;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
