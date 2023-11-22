@@ -6,8 +6,12 @@ body {
   font-family: 'Inter', sans-serif;
   background: black;
   color: var(--light-text);
-  background-image: url('./assets/Desktop.svg');
+  background-image: url('./Desktop.svg');
   background-size: cover;
+}
+
+button {
+  cursor: pointer;
 }
 
 img {
@@ -62,10 +66,12 @@ img {
   justify-content: space-between;
 
   a {
+    align-self: start;
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
     letter-spacing: 0;
+    @include link-underline-animation;
   }
 
   &__logo {
@@ -182,12 +188,10 @@ img {
     &__btn {
       width: 262px;
       height: 61px;
-      background: var(--button-color);
-      color: var(--light-text);
       font-weight: 500;
       line-height: 19.36px;
       font-size: 16px;
-      cursor: pointer;
+      @include btn-animation(#4077F3, var(--light-text));
     }
   }
 }
@@ -201,10 +205,15 @@ img {
   margin-top: 160px;
   padding-bottom: 70px;
 
+      
+  a {
+    @include link-opacity-animation;
+  }
+
   .footer__links {
     display: flex;
     justify-content: space-between;
-    
+
 
     &__block {
 
